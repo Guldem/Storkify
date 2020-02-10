@@ -5,6 +5,7 @@ import com.squareup.moshi.Moshi
 import nl.guldem.storkify.services.PreferencesService
 import okhttp3.Request
 
+//TODO: make mock folder dynamic
 private const val MOCK_FOLDER_PATH = "mock"
 private const val MOCK_METADATA_NAME = "metadata"
 private const val MOCK_RESPONSE_NAME = "response"

@@ -42,8 +42,8 @@ data class MockError(
 )
 
 sealed class MockResult {
-    data class Data(val mockdata: MockData) : MockResult()
-    data class Error(val mockError: MockError) : MockResult()
+    data class Data(val mockdata: MockData): MockResult()
+    data class Error(val mockError: MockError): MockResult()
 
     val responseCode: Int
         get() = when (this) {

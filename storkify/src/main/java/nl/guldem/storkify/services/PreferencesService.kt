@@ -2,6 +2,8 @@ package nl.guldem.storkify.services
 
 import android.content.Context
 
+
+//TODO: Make dynamic
 const val PREFERENCE_NAME = "Storkify"
 
 
