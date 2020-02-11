@@ -8,7 +8,7 @@ import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import nl.guldem.storkify.services.PREFERENCE_NAME
 
-class DeveloperMockSettingsFragment : PreferenceFragmentCompat() {
+class DeveloperMockSettingsFragment: PreferenceFragmentCompat() {
 
     lateinit var developerMockSettingsViewModel: DeveloperMockSettingsViewModel //todo initiate viewmodel
 
