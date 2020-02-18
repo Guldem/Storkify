@@ -10,8 +10,10 @@ private const val MOCK_FOLDER_PATH = "mock"
 private const val MOCK_METADATA_NAME = "metadata"
 private const val MOCK_RESPONSE_NAME = "response"
 
-class MockService constructor(val context: Context, val moshi: Moshi, private val preferencesService: PreferencesService) {
+class MockService constructor(private val context: Context) {
 
+    private val preferencesService = PreferencesService(context)
+    private val moshi = Moshi.Builder().build()
     private var mockData = fetchAllAvailableMockData()
 
     fun mockDataStored(): Boolean {
