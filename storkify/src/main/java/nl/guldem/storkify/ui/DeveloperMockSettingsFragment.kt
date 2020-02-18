@@ -9,8 +9,8 @@ import androidx.preference.SwitchPreferenceCompat
 import nl.guldem.BuildConfig
 
 class DeveloperMockSettingsFragment: PreferenceFragmentCompat() {
-
-    lateinit var developerMockSettingsViewModel: DeveloperMockSettingsViewModel //todo initiate viewmodel
+//todo implementeren
+    //private val developerMockSettingsViewModel: DeveloperMockSettingsViewModel by viewModels() //todo initiate viewmodel
 
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -56,16 +56,18 @@ class DeveloperMockSettingsFragment: PreferenceFragmentCompat() {
         mockData.title = "Select mockData to use"
         mockData.summary = ""
 
-        val mockDataArray = developerMockSettingsViewModel.getMockDataArray().toTypedArray()
+        val mockDataArray =
+            emptyArray<String>()//todo implementeren //developerMockSettingsViewModel.getMockDataArray().toTypedArray()
         //set display labels for mock data
         mockData.entries = mockDataArray
         //set keys array for mock data
         mockData.entryValues = mockDataArray
 
         //select the first value if array has not been set
-        if (!developerMockSettingsViewModel.mockDataStored()) {
-            mockData.values = setOf(mockDataArray.firstOrNull())
-        }
+        //todo implementeren
+//        if (!developerMockSettingsViewModel.mockDataStored()) {
+//            mockData.values = setOf(mockDataArray.firstOrNull())
+//        }
 
         baseMockSettingsScreen.addPreference(mockArrayCategory)
         mockArrayCategory.addPreference(mockData)
