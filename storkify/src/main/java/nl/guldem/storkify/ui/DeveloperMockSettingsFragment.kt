@@ -6,7 +6,7 @@ import androidx.preference.MultiSelectListPreference
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
-import nl.guldem.storkify.services.PREFERENCE_NAME
+import nl.guldem.BuildConfig
 
 class DeveloperMockSettingsFragment: PreferenceFragmentCompat() {
 
@@ -16,13 +16,13 @@ class DeveloperMockSettingsFragment: PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
 
         //setup shared preferences
-        preferenceManager.sharedPreferencesName = PREFERENCE_NAME
+        preferenceManager.sharedPreferencesName = BuildConfig.LIBRARY_PACKAGE_NAME
         preferenceManager.sharedPreferencesMode = Context.MODE_PRIVATE
 
         val baseMockSettingsScreen = preferenceManager.createPreferenceScreen(context)
 
 
-        val baseMockSettingsCategory = androidx.preference.PreferenceCategory(context)
+        val baseMockSettingsCategory = PreferenceCategory(context)
         baseMockSettingsCategory.title = "Base settings"
 
         //add use mock switch

@@ -3,15 +3,14 @@ package nl.guldem.storkify.services
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
+import nl.guldem.BuildConfig
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-//TODO: Make dynamic
-const val PREFERENCE_NAME = "Storkify"
-
 class PreferencesService(context: Context) {
 
-    private val prefs = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+    private val prefs =
+        context.getSharedPreferences(BuildConfig.LIBRARY_PACKAGE_NAME, Context.MODE_PRIVATE)
 
     var useHTTPFallback by BooleanPreference()
     var useMock by BooleanPreference()
