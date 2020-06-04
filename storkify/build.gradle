@@ -14,6 +14,13 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    compileOptions {
+        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
     buildTypes {
         release {
             minifyEnabled true
@@ -28,6 +35,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation "com.squareup.okhttp3:okhttp:4.3.1"
+    implementation "androidx.fragment:fragment-ktx:1.2.0"
     implementation "androidx.preference:preference:1.1.0"
     implementation("com.squareup.moshi:moshi:1.9.2")
     kapt("com.squareup.moshi:moshi-kotlin-codegen:1.9.2")

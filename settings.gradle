@@ -1,2 +1,2 @@
-include ':storkify'
+include ':storkify', ':samplestorkify'
 rootProject.name='Storkify'
