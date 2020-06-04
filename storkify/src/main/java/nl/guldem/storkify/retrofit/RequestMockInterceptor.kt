@@ -12,10 +12,11 @@ import okhttp3.ResponseBody.Companion.toResponseBody
 import okio.buffer
 import okio.source
 
-class RequestMockInterceptor constructor(
-    val context: Context,
-    private val mockService: MockService
-) : Interceptor {
+class RequestMockInterceptor constructor(private val context: Context) : Interceptor {
+
+    private val mockService = MockService(context)
+
+
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
 

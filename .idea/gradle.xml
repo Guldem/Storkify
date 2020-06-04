@@ -11,6 +11,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/samplestorkify" />
             <option value="$PROJECT_DIR$/storkify" />
           </set>
         </option>
